@@ -28,12 +28,12 @@ class AnimationViewController: UIViewController {
         
         switch imageViewDisplayState {
         case .visible:
-            // set new variables for hidden state
+            
             alpha = 0
             newImageViewDisplayState = .hidden
             buttonTitle = "FADE IN"
         case .hidden:
-            // set new variables for visible state
+            
             alpha = 1
             newImageViewDisplayState = .visible
             buttonTitle = "FADE OUT"
@@ -55,7 +55,7 @@ class AnimationViewController: UIViewController {
             print("Pan was cancelled")
         case .changed:
             print("Pan was changed -- we will change the image view's frame")
-            // Mark: - Movement
+            
             let movement = panGestureReconizer.translation(in: view)
             draggableImageViewCenterXConstraint.constant += movement.x
             draggableImageViewCenterYConstraint.constant += movement.y
