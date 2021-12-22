@@ -1,0 +1,21 @@
+PODS:
+  - Kingfisher (7.1.0)
+  - UIColor_Hex_Swift (5.1.7)
+
+DEPENDENCIES:
+  - Kingfisher (~> 7.0)
+  - UIColor_Hex_Swift (~> 5.1.7)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Kingfisher
+  trunk:
+    - UIColor_Hex_Swift
+
+SPEC CHECKSUMS:
+  Kingfisher: cdabaf49be7ee7cc124f0f276b355edf61903cf8
+  UIColor_Hex_Swift: 31cd3e47440f07a20d2503a36bb0437a445b3c29
+
+PODFILE CHECKSUM: 4cc1b4f67bd5feec7bec1f5aac14ece4a10aa6b9
+
+COCOAPODS: 1.11.2

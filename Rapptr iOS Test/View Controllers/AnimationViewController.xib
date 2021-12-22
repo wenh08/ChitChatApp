@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnimationViewController" customModule="ChitChat" customModuleProvider="target">
+            <connections>
+                <outlet property="animateFadeButton" destination="Csf-hb-RPx" id="nBV-a6-fxh"/>
+                <outlet property="draggableImageView" destination="VF5-4k-c3p" id="HkB-Rt-mr1"/>
+                <outlet property="draggableImageViewCenterXConstraint" destination="v3T-8A-P25" id="9IK-Fd-NgD"/>
+                <outlet property="draggableImageViewCenterYConstraint" destination="GQo-ks-TI8" id="cVQ-R5-Flb"/>
+                <outlet property="view" destination="NJ2-5A-Lw5" id="pYW-va-ZXI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="2Pd-Bu-J9Q">
+            <connections>
+                <action selector="handlePanGesture:" destination="-1" id="nPR-KB-TtU"/>
+            </connections>
+        </panGestureRecognizer>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="NJ2-5A-Lw5">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csf-hb-RPx">
+                    <rect key="frame" x="30" y="596" width="315" height="55"/>
+                    <color key="backgroundColor" red="0.054901960780000002" green="0.36078431370000003" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="m73-yB-JI1"/>
+                    </constraints>
+                    <state key="normal" title="FADE IN">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="didPressFade:" destination="-1" eventType="touchUpInside" id="xi5-nb-OFW"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="VF5-4k-c3p">
+                    <rect key="frame" x="29" y="296.5" width="317" height="74"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="2Pd-Bu-J9Q" appends="YES" id="Y32-kT-1KX"/>
+                    </connections>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Csf-hb-RPx" secondAttribute="trailing" constant="30" id="4Ug-1c-aFB"/>
+                <constraint firstAttribute="bottomMargin" secondItem="Csf-hb-RPx" secondAttribute="bottom" constant="16" id="6km-WS-Jvn"/>
+                <constraint firstItem="VF5-4k-c3p" firstAttribute="centerY" secondItem="NJ2-5A-Lw5" secondAttribute="centerY" id="GQo-ks-TI8"/>
+                <constraint firstItem="Csf-hb-RPx" firstAttribute="leading" secondItem="NJ2-5A-Lw5" secondAttribute="leading" constant="30" id="esE-Ii-0yC"/>
+                <constraint firstItem="VF5-4k-c3p" firstAttribute="centerX" secondItem="NJ2-5A-Lw5" secondAttribute="centerX" id="v3T-8A-P25"/>
+            </constraints>
+            <point key="canvasLocation" x="34.399999999999999" y="54.422788605697157"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_logo" width="317" height="74"/>
+    </resources>
+</document>
