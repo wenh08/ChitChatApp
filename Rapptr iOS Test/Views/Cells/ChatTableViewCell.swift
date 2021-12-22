@@ -23,7 +23,7 @@ class ChatTableViewCell: UITableViewCell {
     
     private func layout() {
         contentView.backgroundColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
-        // Order matters since views will be constrainted to one another.
+        
         layoutAvatarImageView()
         layoutHeaderLabel()
         layoutBodyContainerView()
